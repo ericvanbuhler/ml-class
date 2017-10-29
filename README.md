@@ -45,7 +45,7 @@ You may need to add the path to your environment variables if you want to use gi
 
 #### Anaconda
 
-Install [anaconda](https://repo.continuum.io/archive/Anaconda3-4.4.0-Windows-x86_64.exe)
+Install [anaconda](https://www.anaconda.com/download)
 
 Try running the following from the command prompt:
 
