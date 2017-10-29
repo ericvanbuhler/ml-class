@@ -10,10 +10,11 @@ text = df['tweet_text']
 # Get pandas Series object of the "emotion" column:
 target = df['is_there_an_emotion_directed_at_a_brand_or_product']
 
-# The rows of  the "emotion" column have one of three strings:
+# The rows of  the "emotion" column have one of four strings:
 # 'Positive emotion'
 # 'Negative emotion'
 # 'No emotion toward brand or product'
+# 'I can't tell'
 
 # Remove the blank rows from the series:
 target = target[pd.notnull(text)]
@@ -28,7 +29,6 @@ counts = count_vect.transform(text)
 # Train with this data with an svm:
 from sklearn.svm import SVC
 
-
 clf = SVC()
 clf.fit(counts, target)
 
@@ -38,5 +38,5 @@ print(clf.predict(count_vect.transform(['i do not love my iphone'])))
 # See what the classifier predicts for some new tweets:
 #for tweet in ('I love my iphone!!!', 'iphone costs too much!!!', 'the iphone is not good', 'I like turtles'):
 #  print('Tweet: ' + tweet)
-#  print('Prediction: ' + str(nb.predict(count_vect.transform([tweet]))))
+#  print('Prediction: ' + str(clf.predict(count_vect.transform([tweet]))))
 #  print('\n')
