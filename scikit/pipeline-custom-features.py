@@ -14,7 +14,7 @@ class NumBangExtractor(BaseEstimator, TransformerMixin):
         return str.count('!')
 
     def transform(self, inp, y=None):
-        out = np.array(map(self.num_bang, inp))
+        out = np.array([self.num_bang(x) for x in inp])
         return out.reshape(-1,1)
 
 
@@ -40,4 +40,10 @@ p = Pipeline(steps=[('feats', FeatureUnion([
                 ('multinomialnb', MultinomialNB())])
 
 p.fit(fixed_text, fixed_target)
-print(p.predict(["I love my iphone!"]))
+#print(p.predict(["I love my iphone!"]))
+
+from sklearn.model_selection import cross_val_score
+
+scores = cross_val_score(p, fixed_text, fixed_target, cv=10)
+print(scores)
+print(scores.mean())
