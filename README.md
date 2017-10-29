@@ -158,6 +158,7 @@ pip install h5py
 pip install scikit-image
 pip install scipy
 pip install pillow
+pip install wandb
 ```
 
 
