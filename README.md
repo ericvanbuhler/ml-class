@@ -90,11 +90,11 @@ cd ml-class
 #### libraries
 
 ```
-pip install wandb
 conda install -c conda-forge pandas
 conda install -c conda-forge scikit-learn
 conda install -c conda-forge tensorflow
 conda install -c conda-forge keras
+conda install -c conda-forge flask
 ```
 
 ### Linux and Mac OS X
@@ -145,17 +145,16 @@ cd ml-class
 
 #### Install necessary pip libraries
 ```
-pip install wandb
 pip install pandas
 pip install scikit-learn
 pip install tensorflow
 pip install keras
+pip install flask
 ```
 
 ### Install python libraries for optional material
 ```
 pip install h5py
-pip install flask
 pip install scikit-image
 pip install scipy
 pip install pillow
