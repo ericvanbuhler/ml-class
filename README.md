@@ -83,7 +83,7 @@ If your version is less than 2.7.12, you have a version issue.  Try reinstalling
 
 #### Clone this github repository
 ```
-git clone https://github.com/lukas/ml-class.git
+git clone https://github.com/ericvanbuhler/ml-class.git
 cd ml-class
 ```
 
