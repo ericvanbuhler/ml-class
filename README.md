@@ -199,48 +199,38 @@ Order of presentation of files, if you want to follow along
 
 ## Scikit Class
 
-### Introduction and Loading data
-- scikit/load-data.py
+### Introduction and loading data
 - scikit/pandas-explore.py
 
-### Feature Extraction
-- scikit/feature-extraction-1.py
-- scikit/feature-extraction-2.py
-- scikit/feature-extraction-3.py
+### Feature extraction
+- scikit/feature-extraction.py
 
-### Build your first classifier
-- scikit/classifier.py
-
-
-### Build another classifier
-- scikit/classifier-svm.py
-
+### Build your first classifiers
+- scikit/classifier-svc.py
+- scikit/classifier-nb.py
+- scikit/pipeline.py
 
 ### Evaluating classifier performance
 - scikit/test-algorithm-1.py
 - scikit/test-algorithm-2.py
-- scikit/test-algorithm-dummy.py
 - scikit/test-algorithm-cross-validation.py
 - scikit/test-algorithm-cross-validation-dummy.py
-- scikit/custom-tokenizer.py
 
-### Evaluating other algorithms and hyperparameters
-- scikit/test-algorithm-cross-validation-hyper.py
-- scikit/test-algorithm-cross-validation-rf.py
-- scikit/test-algorithm-cross-validation-svm.py
-- scikit/cross-validation-wandb.py
-
-### Pipelines, Grid Search and Custom Features
-- scikit/pipeline.py
-- scikit/pipeline-bigrams.py
-- scikit/pipeline-bigrams-cross-validation.py
-- scikit/feature-selection.py
+### Evaluating other parameters and feature selection methods
+- scikit/test-algorithm-hyper.py
+- scikit/test-algorithm-bigrams.py
+- scikit/test-algorithm-feature-selection.py
+- scikit/test-algorithm-custom-features.py
+- scikit/test-algorithm-custom-tokenizer.py
 - scikit/grid-search.py
-- scikit/pipeline-custom-features.py
 
-### Model Save/Server
-- scikit/pipeline-save.py
-- scikit/pipeline-server.py
+### Evaluating other algorithms
+- scikit/test-algorithm-rf.py
+- scikit/test-algorithm-sgd.py
+
+### Model save/server
+- scikit/model-save.py
+- scikit/model-server.py
 
 ## Keras Class
 
