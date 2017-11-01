@@ -11,7 +11,7 @@ product = df['emotion_in_tweet_is_directed_at']
 # For more ideas check out
 #    https://pandas.pydata.org/pandas-docs/stable/10min.html
 print(text.head())
-
+print(target.unique())
 # Prints the string where the target contains the word Positive
 #print(text[target.str.contains("Positive")])
 
