@@ -13,8 +13,8 @@ from keras.callbacks import ModelCheckpoint
 from keras.utils import np_utils
 from keras.models import load_model
 
-filename = "male.txt"
-raw_text = open(filename).read()
+filename = "book.txt"
+raw_text = open(filename, "r", encoding="utf8").read()
 raw_text = raw_text.lower()
 
 # create mapping of unique chars to integers
@@ -31,9 +31,6 @@ for i in range(len(raw_text) - seq_length):
 	dataX.append([char_to_int[char] for char in seq_in])
 	dataY.append(char_to_int[seq_out])
 n_patterns = len(dataX)
-
-
-
 
 # reshape X to be [samples, time steps, features]
 X = np.reshape(dataX, (n_patterns, seq_length, 1))
@@ -56,4 +53,4 @@ cached_data = {
 }
 with open('book.pkl', 'wb') as output:
 	pickle.dump(cached_data, output)
-print("Wrote cache to %s." % output.name)
+print("Wrote cache to %s" % output.name)

@@ -1,5 +1,3 @@
-# using a validation set properly
-
 import numpy
 from keras.datasets import mnist
 from keras.models import Sequential
@@ -8,9 +6,6 @@ from keras.layers import Flatten
 from keras.callbacks import ModelCheckpoint
 from keras.layers import Dropout
 from keras.utils import np_utils
-from keras.optimizers import SGD
-import wandb
-run = wandb.init()
 
 # load data
 (X_train, y_train), (X_test, y_test) = mnist.load_data()

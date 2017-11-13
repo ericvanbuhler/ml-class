@@ -2,10 +2,7 @@ from keras.datasets import mnist
 from keras.models import Sequential
 from keras.layers import Conv2D, MaxPooling2D, Dropout, Dense, Flatten
 from keras.utils import np_utils
-from wandb.wandb_keras import WandbKerasCallback
-import wandb
 
-run = wandb.init()
 config = run.config
 
 (X_train, y_train), (X_test, y_test) = mnist.load_data()
@@ -15,7 +12,7 @@ X_train /= 255.
 X_test = X_test.astype('float32')
 X_test /= 255.
 
-#reshape input data
+# reshape input data
 X_train = X_train.reshape(X_train.shape[0], config.img_width, config.img_height, 1)
 X_test = X_test.reshape(X_test.shape[0], config.img_width, config.img_height, 1)
 
@@ -36,5 +33,4 @@ model.add(Dense(num_classes, activation='softmax'))
 
 model.compile(loss='categorical_crossentropy', optimizer='adam',
                 metrics=['accuracy'])
-model.fit(X_train, y_train, validation_data=(X_test, y_test),
-                            callbacks=[WandbKerasCallback()], epochs=config.epochs)
+model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=config.epochs)

@@ -95,12 +95,17 @@ conda install -c conda-forge scikit-learn
 conda install -c conda-forge tensorflow
 conda install -c conda-forge keras
 conda install -c conda-forge flask
+conda install -c conda-forge scikit-image
+conda install -c conda-forge scipy
+conda install -c conda-forge cycler
+conda install -c conda-forge jupyter
+conda install -c conda-forge opencv
 ```
 
 ### Linux and Mac OS X
 #### Git
 
-On linux follow these isntructions to install git based on your distribution:
+On linux follow these instructions to install git based on your distribution:
 
 Ubuntu:
 
@@ -215,7 +220,6 @@ Order of presentation of files, if you want to follow along
 ### Build another classifier
 - scikit/classifier-svm.py
 
-
 ### Evaluating classifier performance
 - scikit/test-algorithm-1.py
 - scikit/test-algorithm-2.py
@@ -303,17 +307,11 @@ Order of presentation of files, if you want to follow along
 - keras-lstm/lstm-time-series-output.py
 - keras-lstm/lstm-time-series-stateful.py
 - keras-lstm/lstm-time-series-timesteps.py
-- keras-lstm/lstm-time-series-window.py
-
 
 ### LSTM for generating text
 - keras-lstm/lstm-preprocess-text.py
-- keras-lstm/lstm-generate-text-rnn.py
-- keras-lstm/lstm-train-rnn.py
 - keras-lstm/lstm-train-lstm.py
 - keras-lstm/lstm-generate-text-lstm.py
-- keras-lstm/lstm-generate-text-rnn.py
-- keras-lstm/lstm-imdb-sentiment-cnn.py
 
 ### visualization
 - keras-cnn/inspect-net.py
