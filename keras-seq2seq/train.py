@@ -4,6 +4,7 @@ from keras.layers import LSTM, TimeDistributed, RepeatVector, Dense
 import numpy as np
 import wandb
 from wandb.keras import WandbCallback
+import random
 
 wandb.init()
 config = wandb.config
@@ -51,7 +52,7 @@ config.batch_size = 128
 maxlen = config.digits + 1 + config.digits
 
 # All the numbers, plus sign and space for padding.
-chars = '0123456789+ '
+chars = '0123456789+- '
 ctable = CharacterTable(chars)
 
 questions = []
@@ -69,9 +70,14 @@ while len(questions) < config.training_size:
         continue
     seen.add(key)
     # Pad the data with spaces such that it is always MAXLEN.
-    q = '{}+{}'.format(a, b)
-    query = q + ' ' * (maxlen - len(q))
-    ans = str(a + b)
+    if (random.random() > .5):
+        q = '{}+{}'.format(a, b)
+        query = q + ' ' * (maxlen - len(q))
+        ans = str(a + b)
+    else:
+        q = '{}-{}'.format(a, b)
+        query = q + ' ' * (maxlen - len(q))
+        ans = str(a - b)
     # Answers can be of maximum size DIGITS + 1.
     ans += ' ' * (config.digits + 1 - len(ans))
     if config.reverse:
